@@ -1,0 +1,39 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #eee;
+    
+}
+
+.container{
+    display: grid;
+    grid-template-columns: repeat(8, 80px);
+    grid-template-rows: repeat(8, 80px);
+    border: solid 2px #000;
+}
+
+.casilla{
+    border: solid 0.5px #000;
+
+}
+.pieza{
+    font-size: 3.5rem;
+    text-align: center;
+    cursor: pointer;
+    height: 100%;
+    max-width: 80px;
+}
+.negra{
+    background-color: #5c5b5b;
+}
+
+.pieza.seleccionado{
+    color:rgb(15, 18, 192);
+}
+
+.bloquear{
+    background-color: red;
+}
