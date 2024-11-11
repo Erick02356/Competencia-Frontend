@@ -54,7 +54,8 @@ document.addEventListener('DOMContentLoaded',(Event)=>{
                 pieza.textContent = piezas[fila][columna]
             }
 
-            pieza.addEventListener('click',() => seleccionarFicha(pieza))
+            // pieza.addEventListener('click',() => seleccionarFicha(pieza))
+            pieza.addEventListener('click',() => cambiarTurno(pieza))
 
         }
 
@@ -66,7 +67,7 @@ document.addEventListener('DOMContentLoaded',(Event)=>{
 
 
 const seleccionarFicha = (pieza) =>{
-        cambiarTurno(pieza)
+        // cambiarTurno(pieza)
 
         const eliminarSeleccion = document.querySelector('.seleccionado')
         if(eliminarSeleccion){
@@ -89,6 +90,7 @@ const cambiarTurno = (pieza) =>{
       if(inicioMovimientos){
         //MUEVEN LAS BLANCAS
         inicioMovimientos=!inicioMovimientos    
+        seleccionarFicha(pieza)
         console.log('Mueven las negras')
         console.log(inicioMovimientos)
       }
@@ -98,6 +100,7 @@ const cambiarTurno = (pieza) =>{
 
             //MUEVEN LAS NEGRAS
             inicioMovimientos=!inicioMovimientos    
+            seleccionarFicha(pieza)
             console.log('Mueven las blancas')
             console.log(inicioMovimientos)
         }
