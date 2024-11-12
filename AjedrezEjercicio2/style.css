@@ -1,10 +1,12 @@
 body{
     display: flex;
     justify-content: center;
+    flex-direction: column-reverse;
     align-items: center;
     height: 100vh;
     margin: 0;
     background-color: #eee;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     
 }
 
@@ -36,4 +38,9 @@ body{
 
 .bloquear{
     background-color: red;
+}
+
+p{
+    font-size: 2rem;
+    font-weight: bold;
 }
